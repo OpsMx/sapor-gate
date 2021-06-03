@@ -16,14 +16,10 @@ To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the
 Edit gate-local.yml and edit the username and password, in plain text
 
 ### Create sapor-gate config files as a secret
-kubectl delete secret sapor-gate-files
-kubectl create secret generic sapor-gate-files --from-file gate-local.yml --from-file gate-overrides.yml --from-file gate.yml --from-file sapor-gate-svc.yaml --from-file spinnakerconfig.yml --from-file spinnaker.yml --dry-run -o yaml > basic-auth-secret.yaml
+- kubectl delete secret sapor-gate-files
+- kubectl create secret generic sapor-gate-files --from-file gate-local.yml --from-file gate-overrides.yml --from-file gate.yml --from-file sapor-gate-svc.yaml --from-file spinnakerconfig.yml --from-file spinnaker.yml --dry-run -o yaml > basic-auth-secret.yaml
 
-### create secret in same namespace where spinnaker is installed
-kubectl apply -f basic-auth-secret.yaml
-
-### create the deployment
-kubectl apply -f basic-auth-gate.yaml
-
-### create the service
-kubectl apply -f sapor-gate-svc.yaml
+### Create the deployment and service
+- kubectl apply -f basic-auth-secret.yaml
+- kubectl apply -f basic-auth-gate.yaml
+- kubectl apply -f sapor-gate-svc.yaml
