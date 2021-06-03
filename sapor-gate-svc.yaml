@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: spin
+    cluster: sapor-gate
+  name: sapor-gate
+spec:
+  ports:
+  - port: 8084
+    protocol: TCP
+    targetPort: 8084
+  selector:
+    app: oes
+    cluster: sapor-gate
+  sessionAffinity: None
+  type: ClusterIP

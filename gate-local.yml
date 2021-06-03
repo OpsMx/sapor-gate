@@ -1,0 +1,12 @@
+server:
+  tomcat:
+    httpsServerPort: X-Forwarded-Port
+    internalProxies: .*
+    protocolHeader: X-Forwarded-Proto
+    remoteIpHeader: X-Forwarded-For
+security:
+  basicform:
+    enabled: true
+  user:
+    name: srini
+    password: kambh123
