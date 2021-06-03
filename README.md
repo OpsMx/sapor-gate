@@ -4,9 +4,9 @@
 To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the following model is available.
 
 ### Summary:
-Create another gate called “sapor-gate”, which is essentially a replica of spin-gate
-Replace the authentication of this gate with “basic authentication”, allowing us to provide a username and a password.
-Basic authentication takes a username and a password. Only the “username” needs to match the admin-user in the real, authenticated spin-gate. Password can be any generic password as only oes-sapor would use it to communicate with the sapor-gate
+1. Create another gate called “sapor-gate”, which is essentially a replica of spin-gate
+2. Replace the authentication of this gate with “basic authentication”, allowing us to provide a username and a password.
+3. Basic authentication takes a username and a password. Only the “username” needs to match the admin-user in the real, authenticated spin-gate. Password can be any generic password as only oes-sapor would use it to communicate with the sapor-gate
 
 ### Modify the following:
 spinnaker.yml:    baseUrl: https://spin.oes37-srini.bogus.net      --- Spinnaker Deck URL
