@@ -9,9 +9,9 @@ To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the
 3. Basic authentication takes a username and a password. Only the “username” needs to match the admin-user in the real, authenticated spin-gate. Password can be any generic password as only oes-sapor would use it to communicate with the sapor-gate
 
 ### Modify the following:
-spinnaker.yml:    baseUrl: https://spin.oes37-srini.bogus.net      --- Spinnaker Deck URL
-spinnaker.yml:    baseUrl: https://spin-gate.oes37-srini.bogus.net --- Spinnaker gate URL
-spinnaker.yml:    baseUrl: redis://:password@oes-redis-master:6379 --- Redis URL
+- spinnaker.yml:    baseUrl: https://spin.oes37-srini.bogus.net      --- Spinnaker Deck URL
+- spinnaker.yml:    baseUrl: https://spin-gate.oes37-srini.bogus.net --- Spinnaker gate URL
+- spinnaker.yml:    baseUrl: redis://:password@oes-redis-master:6379 --- Redis URL
 
 Edit gate-local.yml and edit the username and password, in plain text
 
