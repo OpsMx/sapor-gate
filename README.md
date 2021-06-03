@@ -25,3 +25,8 @@ Edit gate-local.yml and edit the username and password, in plain text
 - kubectl apply -f basic-auth-secret.yaml
 - kubectl apply -f basic-auth-gate.yaml
 - kubectl apply -f sapor-gate-svc.yaml
+
+### Go to OES-UI
+- echo -ne "username:password" | base64 -w0
+- use http://sapor-gate:8084 as the spinnaker url
+- Select LDAP, and enter password as the base64 encoded string above
