@@ -29,7 +29,7 @@ Edit gate-local.yml and edit the **username and password**, in plain text
 - kubectl apply -f sapor-gate-svc.yaml
 
 ### Get the base64 encoded string
-- echo -ne "username:password" | base64 -w0
+- echo -ne "**username:password**" | base64 -w0                  REPLACE username:password as appropriate
 
 ### Go to OES-UI
 - use http://sapor-gate:8084 as the spinnaker url
