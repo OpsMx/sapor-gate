@@ -11,8 +11,8 @@ To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the
 All these steps can be done by cloning this repo and following the steps below.
 
 ### Update Sapor image if using release 3.7 or earlier
-
-
+- quay.io/opsmxpublic/ubi8-oes-sapor:v3.6.2.1
+- kubectl set image deployment/oes-sapor oes-sapor=quay.io/opsmxpublic/ubi8-oes-sapor:v3.6.2.1
 
 ### Modify the following to point to the correct url:
 - spinnaker.yml:    baseUrl: redis://:password@oes-redis-master:6379 --- Redis URL
