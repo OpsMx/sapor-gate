@@ -10,6 +10,10 @@ To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the
 
 All these steps can be done by cloning this repo and following the steps below.
 
+### Update Sapor image if using release 3.7 or earlier
+
+
+
 ### Modify the following to point to the correct url:
 - spinnaker.yml:    baseUrl: redis://:password@oes-redis-master:6379 --- Redis URL
 
