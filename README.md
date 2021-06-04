@@ -1,7 +1,7 @@
 # sapor-gate
 
 ### Introduction
-To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the following model is available.
+To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the following model is being proposed.
 
 ### Solution Summary:
 1. Create another gate called “sapor-gate”, which is essentially a replica of spin-gate
