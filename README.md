@@ -10,12 +10,10 @@ To solve the problem of oes-SAPOR and spinnaker’s spin-gate communication, the
 
 All these steps can be done by cloning this repo and following the steps below.
 
-### Modify the following:
-- spinnaker.yml:    baseUrl: https://spin.oes37-srini.bogus.net      --- Spinnaker Deck URL
-- spinnaker.yml:    baseUrl: https://spin-gate.oes37-srini.bogus.net --- Spinnaker gate URL
+### Modify the following to point to the correct url:
 - spinnaker.yml:    baseUrl: redis://:password@oes-redis-master:6379 --- Redis URL
 
-Edit gate-local.yml and edit the username and password, in plain text
+Edit gate-local.yml and edit the **username and password**, in plain text
 
 ### Create sapor-gate config files as a secret
 - kubectl delete secret sapor-gate-files
